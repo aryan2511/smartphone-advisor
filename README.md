@@ -45,7 +45,7 @@ Built with a modern, scalable, and robust architecture.
 | **Frontend** | ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white) | A responsive, high-performance UI with a glassmorphism design language. |
 | **Backend** | ![Spring Boot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=flat&logo=spring-boot&logoColor=green) ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white) | The core logic engine handling API requests, user sessions, and complex scoring algorithms. |
 | **Data Services** | ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white) | Microservices for scraping YouTube/Reddit data and syncing product catalogs. |
-| **Database** | ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=flat&logo=mysql&logoColor=white) | Relational database for storing phone specs, user reviews, and sentiment data. |
+| **Database** | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white) ![Neon](https://img.shields.io/badge/Neon-00E599?style=flat&logo=neon&logoColor=black) | Serverless Postgres database for storing phone specs, user reviews, and sentiment data. |
 
 ---
 
