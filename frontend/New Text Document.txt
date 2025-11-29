@@ -1,0 +1,11 @@
+{phone.amazonRating && (
+  <div className="flex items-start gap-4">
+    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center text-white font-bold text-xl shadow-md">
+      {phone.amazonRating}⭐
+    </div>
+    <div>
+      <p className="font-semibold text-slate-800 mb-1">Amazon Customers</p>
+      <p className="text-sm text-slate-600 font-light">Based on {phone.amazonReviewCount} reviews</p>
+    </div>
+  </div>
+)}

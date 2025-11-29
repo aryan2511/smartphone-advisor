@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AdvisorApplication<advisor>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.phonepick.advisor.AdvisorApplication",
+            "projectName": "advisor",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

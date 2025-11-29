@@ -1,0 +1,123 @@
+Smartphone Advisor Website – Development Blueprint
+--------------------------------------------------
+
+Objective:
+A web application that helps users choose the best smartphone based on their preferences such as camera, battery, software speed, privacy, and looks, within their budget. The system provides recommendations and affiliate links from major e-commerce platforms.
+
+--------------------------------------------------
+I. Core Idea
+--------------------------------------------------
+
+The website asks users a short sequence of questions and provides personalized smartphone recommendations.
+
+User Flow:
+1. Page 1 – Select Product Type (e.g., Smartphone)
+2. Page 2 – Select Budget Range
+3. Page 3 – Rank Priorities (Camera, Battery, Software Speed, Privacy, Looks)
+4. Page 4 – Display Recommended Phones with Affiliate Links
+
+--------------------------------------------------
+II. Technical Architecture Overview
+--------------------------------------------------
+
+Frontend:
+- Framework: React (or Next.js)
+- Libraries: React Router, Tailwind CSS or Material UI for styling
+- State Management: React Context API or Redux
+- Features:
+  - Multi-step form navigation (4 pages)
+  - Responsive design
+  - Dynamic sliders and dropdowns
+  - API integration for recommendations
+
+Backend:
+- Framework: Spring Boot (Java 17+)
+- Database: MySQL or PostgreSQL
+- ORM: Spring Data JPA
+- API Endpoints:
+  - POST /api/recommend – Accepts user preferences and returns top recommendations
+  - GET /api/prices – (Optional) Fetches live prices from affiliate APIs
+- Logic:
+  - Match phones within budget range
+  - Apply user-defined weights to feature scores
+  - Sort and return top recommendations
+
+Database Design (Minimal):
+- Table: phones
+  - id (Primary Key)
+  - brand
+  - model
+  - price_estimate
+  - camera_score
+  - battery_score
+  - software_score
+  - privacy_score
+  - design_score
+  - affiliate_amazon
+  - affiliate_flipkart
+
+--------------------------------------------------
+III. Data Flow
+--------------------------------------------------
+
+1. User inputs are collected on frontend (budget, preferences).
+2. Frontend sends POST request to /api/recommend.
+3. Backend queries database for phones within price range.
+4. For each phone, calculates weighted score based on priorities.
+5. Sorts phones by score and returns top results.
+6. Frontend displays recommended phones with affiliate links.
+
+--------------------------------------------------
+IV. Tech Stack Summary
+--------------------------------------------------
+
+Frontend:
+- React, React Router, Tailwind CSS (UI)
+- Context API or Redux for state handling
+- Axios for API communication
+
+Backend:
+- Java 17+, Spring Boot, Maven
+- Spring Data JPA, Lombok, MySQL
+- RESTful APIs
+
+Deployment:
+- Frontend: Vercel / Netlify
+- Backend: Render / Railway / AWS EC2
+- Database: Railway / AWS RDS / PlanetScale
+
+--------------------------------------------------
+V. Project Timeline (Suggested)
+--------------------------------------------------
+
+Week 1 – Frontend Development
+- Day 1–2: Setup React, routing, and basic pages
+- Day 3: Budget range component
+- Day 4: Priority sliders
+- Day 5: Results page with mock data
+
+Week 2 – Backend and Integration
+- Day 6: Spring Boot setup, database schema
+- Day 7: Recommendation logic
+- Day 8: Connect frontend to backend API
+- Day 9: Add affiliate links, refine data flow
+- Day 10: Styling, testing, and deployment
+
+--------------------------------------------------
+VI. Future Enhancements
+--------------------------------------------------
+
+- Integrate real Amazon and Flipkart APIs for live pricing.
+- Add user accounts and saved recommendations.
+- Implement sentiment analysis on user reviews.
+- Add price comparison view.
+- Create admin dashboard for phone data management.
+
+--------------------------------------------------
+VII. Key Considerations
+--------------------------------------------------
+
+- Start with a small local dataset (200–300 phones) to stay within free-tier limits.
+- Use affiliate APIs where possible instead of scraping.
+- Cache frequent price lookups to avoid hitting rate limits.
+- Keep UI simple and mobile-friendly for smooth user 

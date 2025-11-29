@@ -1,0 +1,30 @@
+{
+  "name": "phone-advisor-data-service",
+  "version": "1.0.0",
+  "description": "Data synchronization service for Phone Advisor - fetches phone specs and reviews",
+  "main": "sync-phones.js",
+  "scripts": {
+    "sync": "node sync-phones.js",
+    "test": "node test-connection.js",
+    "import-csv": "node import-from-csv.js",
+    "youtube-sync": "node youtube-sync.js"
+  },
+  "keywords": [
+    "phone",
+    "gsmarena",
+    "youtube",
+    "reviews",
+    "data-sync"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "csv-parser": "^3.2.0",
+    "dotenv": "^16.3.1",
+    "gsmarena-api": "^2.0.5",
+    "pg": "^8.11.3",
+    "googleapis": "^128.0.0",
+    "axios": "^1.6.0",
+    "sentiment": "^5.0.2"
+  }
+}
