@@ -3,7 +3,8 @@
  * Handles all backend communication
  */
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
+// Use production backend URL
+const API_BASE_URL = 'https://smartphone-advisor-backend-production.up.railway.app/api';
 
 /**
  * Get phone recommendations based on user preferences
