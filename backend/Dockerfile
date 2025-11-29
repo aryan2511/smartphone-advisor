@@ -8,6 +8,7 @@ COPY .mvn/ .mvn/
 COPY mvnw pom.xml ./
 
 # Download dependencies (go-offline) to improve build speed on subsequent runs
+RUN chmod +x mvnw
 RUN ./mvnw dependency:go-offline
 
 # Copy source code
@@ -29,3 +30,4 @@ EXPOSE 8080
 
 # Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
+
