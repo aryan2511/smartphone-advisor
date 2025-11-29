@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { HiDevicePhoneMobile, HiSparkles } from 'react-icons/hi2';
 import { IoChevronForward } from 'react-icons/io5';
+import { GrCatalog } from "react-icons/gr";
 
 function ProductSelection() {
   const [selectedProduct, setSelectedProduct] = useState('');
@@ -19,10 +20,10 @@ function ProductSelection() {
         {/* Minimal Logo/Brand */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 mb-4 shadow-lg shadow-indigo-200">
-            <HiSparkles className="w-8 h-8 text-white" />
+            <GrCatalog className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-5xl font-light text-slate-800 dark:text-white mb-3 tracking-tight">
-            SmartPick
+            Find My Gadget
           </h1>
           <p className="text-slate-500 dark:text-slate-400 text-lg font-light">
             Find your perfect device in minutes
