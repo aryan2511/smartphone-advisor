@@ -39,5 +39,11 @@ RUN echo 'server {' > /etc/nginx/conf.d/default.conf && \
 # Expose port 80
 EXPOSE 80
 
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Create startup script that injects env vars
+RUN echo '#!/bin/sh' > /docker-entrypoint.sh && \
+    echo 'sed -i "s|VITE_API_URL_PLACEHOLDER|${VITE_API_URL}|g" /usr/share/nginx/html/env-config.js' >> /docker-entrypoint.sh && \
+    echo 'nginx -g "daemon off;"' >> /docker-entrypoint.sh && \
+    chmod +x /docker-entrypoint.sh
+
+# Start with custom entrypoint
+CMD ["/docker-entrypoint.sh"]
